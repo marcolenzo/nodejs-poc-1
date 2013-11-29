@@ -1,0 +1,24 @@
+<div class="modal-header">
+	<h3>Add a new Customer</h3>
+</div>
+
+<div class="modal-body"><table>
+        <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" ng-model="input.name"><br></td>
+        </tr>
+        <tr>
+                <td><label>Surname</label></td>
+                <td><input type="text" ng-model="input.surname"><br></td>
+        </tr>
+        <tr>
+                <td><label>Description</label></td>
+                <td><input type="text" ng-model="input.description"><br></td>
+        </tr>
+</table></div>
+
+
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="ok()">OK</button>
+	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

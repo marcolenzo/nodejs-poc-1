@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="utf-8" />
+	<title>NodeJS POC</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="js/angular.min.js"></script>
+	<script src="js/angular-resource.min.js"></script>
+	<script src="js/ui-bootstrap-tpls-0.7.0.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+
+<body> 
+<div class="container-fluid" ng-controller="MainCtrl">
+	<div class="row-fluid">
+		<div class="span2">
+		<div class="well sidebar-nav">
+            	<ul class="nav nav-list">
+              		<li class="nav-header">Options</li>
+              		<li><a href="#" ng-click="addCustomerDialog()">Add Customer</a></li>
+			<li><a href="#">Find Customer</a></li>
+           	</ul>
+          	</div><!--/.well -->
+		</div>
+	<div class="span10">
+	<h2>Customers</h2>
+	<br>
+
+	<!-- Search Customer By ID 
+	<input ng-model="searchId" type="text">
+        <input type="button" value="Search Customer by ID" ng-click="getCustomerById()">
+	-->
+
+        <table class="table">
+	<thead>
+	<tr>
+		<th>ID</th>
+		<th>Name & Surname</th>
+		<th>Description</th>
+		<th>Actions</th>
+	</tr>
+	</thead>
+	<tr ng-repeat="customer in customers">
+		<td>{{customer._id}}</td>
+		<td class="column1">{{customer.name}} {{customer.surname}}</td>
+		<td>{{customer.description}}</td>
+		<td>
+			<button class="btn">Edit</button>
+			<button class="btn" ng-click="deleteCustomer(customer._id)">Delete</button>
+		</td>
+	</tr>
+	</table>
+	</div>
+	</div>
+</div>
+</body>
+</html>
