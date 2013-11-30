@@ -42,7 +42,7 @@ app.get('/customer', customers.getAll);
 app.get('/customer/:id', customers.getById);
 app.get('/customer/name/:name', customers.getByName);
 app.post('/customer', customers.addCustomer);
-app.put('/customer/:id', customers.updateCustomer);
+app.post('/customer/:id', customers.updateCustomer);
 app.delete('/customer/:id', customers.deleteCustomer);
 
 app.listen(80);

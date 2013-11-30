@@ -3,9 +3,11 @@
 <head>
 	<meta charset="utf-8" />
 	<title>NodeJS POC</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <script src="js/angular.min.js"></script>
+    <script src="js/angular.min.js"></script>
 	<script src="js/angular-resource.min.js"></script>
+	<script src="js/angular-animate.min.js"></script>
 	<script src="js/ui-bootstrap-tpls-0.7.0.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
@@ -45,7 +47,7 @@
 		<td class="column1">{{customer.name}} {{customer.surname}}</td>
 		<td>{{customer.description}}</td>
 		<td>
-			<button class="btn">Edit</button>
+			<button class="btn" ng-click="editCustomerDialog(customer)">Edit</button>
 			<button class="btn" ng-click="deleteCustomer(customer._id)">Delete</button>
 		</td>
 	</tr>
